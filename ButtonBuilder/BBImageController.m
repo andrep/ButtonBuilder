@@ -23,21 +23,23 @@
 #import "BBThemeHandler.h"
 #import "MyDocument.h"
 
+//***************************************************************************
+
 @implementation BBImageController
 
-//Prepare Images
--(void)prepareImages
+- (void)dealloc
 {
-
+	[compositeImage release];
+	
+	[super dealloc];
 }
 
-//Draw Image
--(void)drawImage 
+- (void) drawImage 
 {
-	//Load buttons from theme handler
-	NSImage *workingRepLeft = [themeHandler getLeftImage];
-	NSImage *workingRepMiddle = [themeHandler getMiddleImage];
-	NSImage *workingRepRight = [themeHandler getRightImage];
+	// Load buttons from theme handler
+	NSImage* workingRepLeft = [themeHandler getLeftImage];
+	NSImage* workingRepMiddle = [themeHandler getMiddleImage];
+	NSImage* workingRepRight = [themeHandler getRightImage];
 	
 	int buttonHeight = [workingRepLeft size].height;
 	int buttonWidth = [workingRepLeft size].width;
@@ -59,7 +61,7 @@
 		[workingRepLeft dissolveToPoint: NSMakePoint(0,0) fraction:([documentController buttonOpacity])];
 		[workingRepRight dissolveToPoint: NSMakePoint([documentController buttonWidth]- [workingRepRight size].width,0) fraction:([documentController buttonOpacity])];
 		
-		NSImage *tempImage = workingRepMiddle;
+		NSImage* tempImage = workingRepMiddle;
 		[tempImage setScalesWhenResized:YES];
 		NSSize newSize;
 		newSize.width = [documentController buttonWidth]-buttonWidth*2;
@@ -121,20 +123,20 @@
 
 
 //Sends back the final image and scales it here too
--(NSImage *)finalImage; 
+- (NSImage*) finalImage; 
 {
-//use this to scale the graphic before sending it to the ImageController	
-	NSImage *scaleThisImage = compositeImage;
+	//use this to scale the graphic before sending it to the ImageController	
+	NSImage* scaleThisImage = compositeImage;
 	NSImageRep *workingRep = [scaleThisImage bestRepresentationForDevice:nil];
 	
-	NSImage *finalImage = [[NSImage alloc] initWithSize:NSMakeSize([workingRep size].width* [documentController buttonSize],[workingRep size].height* [documentController buttonSize])];
+	NSImage* finalImage = [[NSImage alloc] initWithSize:NSMakeSize([workingRep size].width* [documentController buttonSize],[workingRep size].height* [documentController buttonSize])];
 
 
 	[finalImage lockFocus];
-		{
-		[[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];
-		[workingRep drawInRect:NSMakeRect(0,0,[workingRep size].width * [documentController buttonSize],[workingRep size].height* [documentController buttonSize])];
-		}
+	{
+	[[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];
+	[workingRep drawInRect:NSMakeRect(0,0,[workingRep size].width * [documentController buttonSize],[workingRep size].height* [documentController buttonSize])];
+	}
 	[finalImage unlockFocus];
 	
 	NSString *myString = [NSString stringWithFormat:@"%ix%i Pixels",(int)[finalImage size].width,(int)[finalImage size].height];
@@ -144,11 +146,6 @@
     //return compositeImage;
 }
 
-//Does this release work?
-- (void)dealloc
-{
-	[compositeImage release];
-	
-	[super dealloc];
-}
 @end
+
+//***************************************************************************

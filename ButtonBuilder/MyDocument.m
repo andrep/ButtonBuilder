@@ -23,7 +23,11 @@
 #import "BBThemeHandler.h"
 #import "BBImageController.h"
 
+//***************************************************************************
+
 @implementation MyDocument
+
+//***************************************************************************
 
 //Set up the Toolbar name and the toolbar Items
 static NSString* ToolbarIdentifier				= @"Main Toolbar Identifier";
@@ -34,11 +38,8 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 static NSString* Item5ToolbarItemIdentifier 	= @"Canvas Size";
 
 
-//////////////////////////////////////////////////////
-//
-// My Nice Clean Code
-//
-///////////////////////////////////////////////////////
+//***************************************************************************
+
 -(void)awakeFromNib 
 {
 	
@@ -152,7 +153,7 @@ static NSString* Item5ToolbarItemIdentifier 	= @"Canvas Size";
 
 - (IBAction)updateBGCanvas:(id)sender;
 {
-	NSImage *compositeImage = [[NSImage alloc] initWithSize:NSMakeSize(1,1)];
+	NSImage* compositeImage = [[NSImage alloc] initWithSize:NSMakeSize(1,1)];
 	
 	[compositeImage lockFocus]; {
 		
@@ -247,7 +248,7 @@ static NSString* Item5ToolbarItemIdentifier 	= @"Canvas Size";
 		
 	//Create the button with BG
 	NSBitmapImageRep *image2 = [[NSBitmapImageRep alloc] initWithData:[[imageController finalImage] TIFFRepresentation]];
-	NSImage *compositeImage = [[NSImage alloc] initWithSize:NSMakeSize([image2 size].width,[image2 size].height)];
+	NSImage* compositeImage = [[NSImage alloc] initWithSize:NSMakeSize([image2 size].width,[image2 size].height)];
 	
 	[compositeImage lockFocus]; 
 		{
@@ -503,3 +504,5 @@ static NSString* Item5ToolbarItemIdentifier 	= @"Canvas Size";
 }
 
 @end
+
+//***************************************************************************

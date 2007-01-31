@@ -21,6 +21,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+//***************************************************************************
+
 @interface BBThemeHandler : NSObject
 {	
 	IBOutlet id  documentController; //MyDocument
@@ -29,10 +31,16 @@
 	NSMutableArray *themeArray;
     NSFileManager *myfilemanager;
 }
-	- (void)loadThemes;
-	- (int)getRowNumber;
-	- (void)setRowNumber:(int)i;
-	-(NSImage *)getLeftImage;
-	-(NSImage *)getMiddleImage;
-	-(NSImage *)getRightImage;
+
+//---------------------------------------------------------------------------
+
+- (void) loadThemes;
+- (int) getRowNumber;
+- (void) setRowNumber:(int)i;
+- (NSImage*) getLeftImage;
+- (NSImage*) getMiddleImage;
+- (NSImage*) getRightImage;
+
 @end
+
+//***************************************************************************

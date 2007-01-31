@@ -22,6 +22,8 @@
 #import "BBThemeHandler.h"
 #import "MyDocument.h"
 
+//***************************************************************************
+
 @implementation BBThemeHandler
 
 -(void)loadThemes;
@@ -64,26 +66,26 @@
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(int)row
 {
-	NSImage *preview = [[NSImage alloc] initWithContentsOfFile:[[NSString stringWithFormat:@"~/Library/Application Support/Button Builder/%@/preview.png",[themeArray objectAtIndex:row]] stringByExpandingTildeInPath]];
+	NSImage* preview = [[NSImage alloc] initWithContentsOfFile:[[NSString stringWithFormat:@"~/Library/Application Support/Button Builder/%@/preview.png",[themeArray objectAtIndex:row]] stringByExpandingTildeInPath]];
 	return preview;
 	
 }
 
--(NSImage *)getLeftImage
+-(NSImage*)getLeftImage
 {
-	NSImage *leftImage = [[NSImage alloc] initWithContentsOfFile:[[NSString stringWithFormat:@"~/Library/Application Support/Button Builder/%@/button_left.png",[themeArray objectAtIndex:[themeTableView selectedRow]]] stringByExpandingTildeInPath]];
+	NSImage* leftImage = [[NSImage alloc] initWithContentsOfFile:[[NSString stringWithFormat:@"~/Library/Application Support/Button Builder/%@/button_left.png",[themeArray objectAtIndex:[themeTableView selectedRow]]] stringByExpandingTildeInPath]];
 	return leftImage;
 }
 
--(NSImage *)getMiddleImage
+-(NSImage*)getMiddleImage
 {
-	NSImage *middleImage = [[NSImage alloc] initWithContentsOfFile:[[NSString stringWithFormat:@"~/Library/Application Support/Button Builder/%@/button_middle.png",[themeArray objectAtIndex:[themeTableView selectedRow]]] stringByExpandingTildeInPath]];
+	NSImage* middleImage = [[NSImage alloc] initWithContentsOfFile:[[NSString stringWithFormat:@"~/Library/Application Support/Button Builder/%@/button_middle.png",[themeArray objectAtIndex:[themeTableView selectedRow]]] stringByExpandingTildeInPath]];
 	return middleImage;
 }
 
--(NSImage *)getRightImage
+-(NSImage*)getRightImage
 {
-	NSImage *rightImage = [[NSImage alloc] 
+	NSImage* rightImage = [[NSImage alloc] 
 	
 	initWithContentsOfFile:[[NSString stringWithFormat:@"~/Library/Application Support/Button Builder/%@/button_right.png",[themeArray objectAtIndex:[themeTableView selectedRow]]] stringByExpandingTildeInPath]];
 	
@@ -93,7 +95,4 @@
 
 @end
 
-
-
-
-
+//***************************************************************************

@@ -21,6 +21,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+//***************************************************************************
+
 @interface MyDocument : NSDocument
 {
 	//Windows
@@ -56,30 +58,33 @@
 	NSFont *currentFont;
 }
 
-- (IBAction)updateCanvas:(id)sender;
-- (IBAction)updateBGCanvas:(id)sender;
-- (IBAction)exportImageAs:(id)sender;
-- (IBAction)hideCaptionWindow:(id)sender;
-- (IBAction)hideOptionsWindow:(id)sender;
-- (IBAction)exportPopUpAction:(id)sender;
+//---------------------------------------------------------------------------
 
-- (void)toggleThemeWindow:(id)sender;
-- (void)showCaptionWindow:(id)sender;
-- (void)showOptionsWindow:(id)sender;
-- (float)buttonSize;
-- (float)buttonOpacity;
-- (int)buttonWidth;
-- (NSString *)getCaption;
-- (NSColor *)getTextColor;
-- (NSColor *)getOverlayColor;
-- (NSColor *)getBGColor;
-- (void)changeFont:(id)fontManager;
-- (void)setFont:(id)sender;
-- (float)getFontSize;
-- (NSString *)getFontName;
-- (int)shadowDisplay;
-- (void)setSliderValue:(float)i;
-- (int)getFontPos;
+- (IBAction) updateCanvas:(id)sender;
+- (IBAction) updateBGCanvas:(id)sender;
+- (IBAction) exportImageAs:(id)sender;
+- (IBAction) hideCaptionWindow:(id)sender;
+- (IBAction) hideOptionsWindow:(id)sender;
+- (IBAction) exportPopUpAction:(id)sender;
+
+- (void) toggleThemeWindow:(id)sender;
+- (void) showCaptionWindow:(id)sender;
+- (void) showOptionsWindow:(id)sender;
+- (float) buttonSize;
+- (float) buttonOpacity;
+- (int) buttonWidth;
+- (NSString*) getCaption;
+- (NSColor*) getTextColor;
+- (NSColor*) getOverlayColor;
+- (NSColor*) getBGColor;
+- (void) changeFont:(id)fontManager;
+- (void) setFont:(id)sender;
+- (float) getFontSize;
+- (NSString*) getFontName;
+- (int) shadowDisplay;
+- (void) setSliderValue:(float)i;
+- (int) getFontPos;
 	
 @end
 
+//***************************************************************************

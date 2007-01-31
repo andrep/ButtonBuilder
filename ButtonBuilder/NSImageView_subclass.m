@@ -21,6 +21,8 @@
 
 #import "NSImageView_subclass.h"
 
+//***************************************************************************
+
 @implementation NSImageView_subclass
 
 /*"	This subclass of NSImageView exists to force an image to display at full size (not scale when resized), and to force the image to be an even number of pixels high and tall so that the image doesn't "blur" in order to stay perfectly centered within a resizeable superview.  To work as expected, this view should be right inside another custom view, so that attempts to resize the view just get the superview's size.
@@ -29,7 +31,7 @@
 /* Override of setImage makes sure that the image is an even number of pixels wide and high, and that it doesn't scale when resized.
 */
 
-- (void)setImage:(NSImage *)inImage
+- (void)setImage:(NSImage*)inImage
 {
 	NSSize theSize = [inImage size];
 	if (0 != ((int)theSize.width  % 2)) { theSize.width ++; }
@@ -55,3 +57,5 @@
 }
 
 @end
+
+//***************************************************************************

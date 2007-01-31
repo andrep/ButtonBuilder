@@ -32,16 +32,15 @@
 {
 	IBOutlet BBThemeHandler* themeHandler;
 	IBOutlet MyDocument* documentController;
-	IBOutlet id regController;
+	IBOutlet NSTextField* sizeTextField;
 	
-	IBOutlet id sizeTextField;
-	
-	NSImage *compositeImage;
+	NSImage* compositeImage;
 }
 
-- (void) prepareImages;
+//---------------------------------------------------------------------------
+
 - (void) drawImage;
-- (NSImage *)finalImage; 
+- (NSImage*) finalImage; 
 
 @end
 
