@@ -1,0 +1,66 @@
+{
+    IBClasses = (
+        {
+            CLASS = BBImageController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                documentController = id; 
+                regController = id; 
+                sizeTextField = id; 
+                themeHandler = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = BBThemeHandler; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {documentController = id; themeTableView = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = CenteredImageView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                exportImageAs = id; 
+                exportPopUpAction = id; 
+                hideCaptionWindow = id; 
+                hideOptionsWindow = id; 
+                updateBGCanvas = id; 
+                updateCanvas = id; 
+            }; 
+            CLASS = MyDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                bgCanvas = id; 
+                bgcolorWell = id; 
+                captionTextView = id; 
+                captionWindow = id; 
+                documentWindow = id; 
+                exportPopUp = id; 
+                fontPosStepper = id; 
+                imageCanvas = id; 
+                imageController = id; 
+                opacitySlider = id; 
+                optionsWindow = id; 
+                overlayColorWell = id; 
+                saveOptionView = id; 
+                scaleSlider = id; 
+                shadowCheckBox = id; 
+                textColorWell = id; 
+                themeHandler = id; 
+                themeWindow = id; 
+                widthSlider = id; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {CLASS = "NSImageView_subclass"; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {
+            ACTIONS = {registerApp = id; useDemo = id; visitWebsite = id; }; 
+            CLASS = RMRegistration; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {licenseCodeField = id; registerWindow = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

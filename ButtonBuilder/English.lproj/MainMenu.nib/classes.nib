@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {registerApp = id; useDemo = id; visitWebsite = id; }; 
+            CLASS = RMRegistration; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {licenseCodeField = id; registerWindow = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
