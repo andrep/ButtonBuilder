@@ -56,15 +56,6 @@
 	return [themeTableView selectedRow];
 }
 
-// We don't use this, but it gets the theme name if you need it // [self getThemeName]
-- (void)getThemeName
-{
-	NSString *themeName = [themeArray objectAtIndex:[themeTableView selectedRow]];
-	NSLog (themeName);
-	return themeName;
-
-}
-
 - (void)setRowNumber:(int)i
 {
 	[themeTableView selectRow:i byExtendingSelection:NO];

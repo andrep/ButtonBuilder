@@ -318,10 +318,11 @@
 				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
 				PRODUCT_NAME = "Button Builder";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
-					"-Wmost",
+					"-Wall",
 					"-Wno-four-char-constants",
 					"-Wno-unknown-pragmas",
 				);
@@ -352,10 +353,11 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
 				PRODUCT_NAME = "Button Builder";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
-					"-Wmost",
+					"-Wall",
 					"-Wno-four-char-constants",
 					"-Wno-unknown-pragmas",
 				);

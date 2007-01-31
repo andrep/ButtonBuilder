@@ -48,7 +48,7 @@
 	IBOutlet id opacitySlider;
 	IBOutlet id	exportPopUp;
 	NSMutableDictionary *saveData;
-	NSWindow *loadedData;
+	NSDictionary *loadedData;
 	
 	NSSavePanel *sp;
 	
@@ -66,7 +66,6 @@
 - (void)toggleThemeWindow:(id)sender;
 - (void)showCaptionWindow:(id)sender;
 - (void)showOptionsWindow:(id)sender;
-- (void)refreshCanvas:(id)sender;
 - (float)buttonSize;
 - (float)buttonOpacity;
 - (int)buttonWidth;
