@@ -1,6 +1,6 @@
 //***************************************************************************
 
-/* Copyright (C) 2002-2007 Realmac Software Limited <dan.counsell@realmacsoftware.com>
+/* Copyright (C) 2004-2007 Realmac Software Limited <dan.counsell@realmacsoftware.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,23 +25,28 @@
 
 @interface BTBController : NSObject
 {
-	IBOutlet NSWindow   *mainWindow;
-		
-    IBOutlet id leftWell;
-    IBOutlet id middleWell;
-    IBOutlet id previewWell;
-    IBOutlet id rightWell;
+	IBOutlet NSWindow*		mainWindow;
+    IBOutlet NSImageView*	leftWell;
+    IBOutlet NSImageView*	middleWell;
+    IBOutlet NSImageView*	previewWell;
+    IBOutlet NSImageView*	rightWell;
 	
-	NSImage *compositeImage;
-	NSBitmapImageRep *workingRepLeft;
-	NSBitmapImageRep *workingRepMiddle;
-	NSBitmapImageRep *workingRepRight;
+	NSImage* compositeImage;
+	NSImage* workingRepLeft;
+	NSImage* workingRepMiddle;
+	NSImage* workingRepRight;
 }
+
+//---------------------------------------------------------------------------
+
 - (IBAction)ExportTheme:(id)sender;
 - (IBAction)updateThemeView:(id)sender;
 - (IBAction)showHelp:(id)sender;
--(void)createPreview;
 
+//---------------------------------------------------------------------------
+
+- (void)createPreview;
+- (void)autoPopulate;
 
 @end
 

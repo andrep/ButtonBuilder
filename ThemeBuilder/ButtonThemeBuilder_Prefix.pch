@@ -1,6 +1,6 @@
 //***************************************************************************
 
-/* Copyright (C) 2002-2007 Realmac Software Limited <dan.counsell@realmacsoftware.com>
+/* Copyright (C) 2004-2007 Realmac Software Limited <dan.counsell@realmacsoftware.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

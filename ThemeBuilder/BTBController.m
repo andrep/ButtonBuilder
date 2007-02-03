@@ -1,6 +1,6 @@
 //***************************************************************************
 
-/* Copyright (C) 2002-2007 Realmac Software Limited <dan.counsell@realmacsoftware.com>
+/* Copyright (C) 2004-2007 Realmac Software Limited <dan.counsell@realmacsoftware.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,12 +23,32 @@
 
 //***************************************************************************
 
+static NSString* ToolbarIdentifier = @"Example Toolbar Identifier";
+static NSString* Item1ToolbarItemIdentifier = @"Item 1 Identifier";
+static NSString* Item2ToolbarItemIdentifier = @"Item 2 Item Identifier";
+
+//***************************************************************************
+
 @implementation BTBController
 
-//Set up the Toolbar name and the toolbar Items
-static NSString* ToolbarIdentifier 		= @"Example Toolbar Identifier";
-static NSString* Item1ToolbarItemIdentifier 	= @"Item 1 Identifier";
-static NSString* Item2ToolbarItemIdentifier 	= @"Item 2 Item Identifier";
+//***************************************************************************
+
+- (void)awakeFromNib
+{
+    NSToolbar *toolbar = [[[NSToolbar alloc] initWithIdentifier: ToolbarIdentifier] autorelease];
+    
+    [toolbar setAllowsUserCustomization: YES];
+    [toolbar setAutosavesConfiguration: YES];
+    [toolbar setDisplayMode: NSToolbarDisplayModeIconAndLabel];
+	
+    [toolbar setDelegate: self];
+	
+    [mainWindow setToolbar: toolbar];
+	
+	[mainWindow center];
+}
+
+//---------------------------------------------------------------------------
 
 - (IBAction)updateThemeView:(id)sender
 {
@@ -44,7 +64,6 @@ static NSString* Item2ToolbarItemIdentifier 	= @"Item 2 Item Identifier";
 
 - (IBAction)ExportTheme:(id)sender
 {
-	
 	[previewWell setImage: compositeImage];	
 	
 	//save stuff
@@ -55,13 +74,13 @@ static NSString* Item2ToolbarItemIdentifier 	= @"Item 2 Item Identifier";
     //[sp setRequiredFileType:@"png"];
 	result = [sp runModalForDirectory:NSHomeDirectory() file:(@"My Theme")];
 	
-	 if (result == NSOKButton) {
-		
+	if (result == NSOKButton)
+	{
 		//Create Folder
 		NSFileManager *theManager = [NSFileManager defaultManager];
 		NSString *theDestination = [sp filename];
 		[theManager createDirectoryAtPath:theDestination attributes:nil];
-			
+		
 		NSLog (@"Path %@", theDestination);
 		
 		//Save Preview Image
@@ -71,35 +90,34 @@ static NSString* Item2ToolbarItemIdentifier 	= @"Item 2 Item Identifier";
 		NSData *data = [image representationUsingType:NSPNGFileType properties:propertyDict];
 		[data writeToFile:[theDestination stringByAppendingString:@"/preview.png"] atomically:NO];
 		
-				
 		//Save Left Image
 		image = [[NSBitmapImageRep alloc] initWithData:[workingRepLeft TIFFRepresentation]];
 		data = [image representationUsingType:NSPNGFileType properties:propertyDict];
 		[data writeToFile:[theDestination stringByAppendingString:@"/button_left.png"] atomically:NO];
-
+		
 		//Save Middle Image
 		image = [[NSBitmapImageRep alloc] initWithData:[workingRepMiddle TIFFRepresentation]];
 		data = [image representationUsingType:NSPNGFileType properties:propertyDict];
 		[data writeToFile:[theDestination stringByAppendingString:@"/button_middle.png"] atomically:NO];
-
+		
 		//Save Right Image
 		image = [[NSBitmapImageRep alloc] initWithData:[workingRepRight TIFFRepresentation]];
 		data = [image representationUsingType:NSPNGFileType properties:propertyDict];
 		[data writeToFile:[theDestination stringByAppendingString:@"/button_right.png"] atomically:NO];
-
-
+		
 		[image release];
-
+		
 		NSLog (@"Saving Done");
-		}
+	}
 }
 
 -(void)autoPopulate
 {
 	//get left image
-	NSBitmapImageRep *workingRepLeft2 = [leftWell image];
+	NSImage* workingRepLeft2 = [leftWell image];
 
 	NSImage* compositeImage2 = [[NSImage alloc] initWithSize:NSMakeSize(1,[workingRepLeft2 size].height)]; 
+	
 	[compositeImage2 lockFocus];
 	{
 		[workingRepLeft2 compositeToPoint: NSZeroPoint fromRect:NSMakeRect([workingRepLeft2 size].width-1, 0, 1, [workingRepLeft2 size].height) operation:NSCompositeCopy];
@@ -129,15 +147,13 @@ static NSString* Item2ToolbarItemIdentifier 	= @"Item 2 Item Identifier";
 
 -(void)createPreview
 {
-	//Get Images
 	workingRepLeft = [leftWell image];
 	workingRepMiddle = [middleWell image];
 	workingRepRight = [rightWell image];
 	
-	
 	compositeImage = [[NSImage alloc] initWithSize:NSMakeSize([workingRepLeft size].width*3,[workingRepLeft size].height)]; 
 	[compositeImage lockFocus];
-		{
+	{
 		[workingRepLeft dissolveToPoint: NSMakePoint(0,0) fraction:1.0];
 		[workingRepRight dissolveToPoint: NSMakePoint([workingRepLeft size].width*2,0) fraction:1.0];
 		
@@ -148,86 +164,64 @@ static NSString* Item2ToolbarItemIdentifier 	= @"Item 2 Item Identifier";
 		newSize.height = [workingRepLeft size].height;
 		[tempImage setSize:newSize];
 		[workingRepMiddle dissolveToPoint: NSMakePoint([workingRepLeft size].width,0) fraction:(1.0)];
-
-
-
-		}
+	}
+	
 	[compositeImage unlockFocus];
 
-	//Scale the preview
-	NSImage *scaleThisImage = compositeImage;
-	NSBitmapImageRep *workingRep = [scaleThisImage bestRepresentationForDevice:nil];
+	NSImage* scaleThisImage = compositeImage;
+	NSImageRep* workingRep = [scaleThisImage bestRepresentationForDevice:nil];
 	
-	NSImage *finalImage = [[NSImage alloc] initWithSize:NSMakeSize([workingRepLeft size].width*3,[workingRepLeft size].height)];
+	NSImage* finalImage = [[NSImage alloc] initWithSize:NSMakeSize([workingRepLeft size].width*3,[workingRepLeft size].height)];
+	
 	[finalImage lockFocus];
-		{
+	{
 		[[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];
 		[workingRep drawInRect:NSMakeRect(0,0,128,100)];
-		}
+	}
 	[finalImage unlockFocus];
-
-
-	//Return Full Size Preview
-	NSLog (@"Preview Made, Sending Image...");
-	return finalImage;
 }
 
-
-
-
-
-
-
-
-
-
-
+//***************************************************************************
 
 //////////////////////////////////////////////////////
 //
 // Toolbar Code starts here 
 //
 ///////////////////////////////////////////////////////
-- (void)awakeFromNib
-{
-    NSToolbar *toolbar = [[[NSToolbar alloc] initWithIdentifier: ToolbarIdentifier] autorelease];
-    
-    [toolbar setAllowsUserCustomization: YES];
-    [toolbar setAutosavesConfiguration: YES];
-    [toolbar setDisplayMode: NSToolbarDisplayModeIconAndLabel];
-
-    [toolbar setDelegate: self];
-
-    [mainWindow setToolbar: toolbar];
-	
-	[mainWindow center];
-}
 
 //We layout the toolbars here
-- (NSToolbarItem *) toolbar: (NSToolbar *)aToolbar itemForItemIdentifier: (NSString *) itemIdent willBeInsertedIntoToolbar:(BOOL) willBeInserted {
+- (NSToolbarItem*) toolbar:(NSToolbar*)aToolbar itemForItemIdentifier:(NSString*)itemIdent willBeInsertedIntoToolbar:(BOOL)willBeInserted
+{
     NSToolbarItem *toolbarItem = [[[NSToolbarItem alloc] initWithItemIdentifier: itemIdent] autorelease];
-  
-      if ([itemIdent isEqualToString:Item1ToolbarItemIdentifier]) {
+	
+	if ([itemIdent isEqualToString:Item1ToolbarItemIdentifier])
+	{
         [toolbarItem setLabel: @"Help"];
         [toolbarItem setPaletteLabel: @"Help"];
         [toolbarItem setImage: [NSImage imageNamed: @"helpIcon"]];
         [toolbarItem setTarget: self];
         [toolbarItem setAction: @selector(showHelp:)];
-    } else if ([itemIdent isEqual: Item2ToolbarItemIdentifier]) {
+    }
+	else if ([itemIdent isEqual: Item2ToolbarItemIdentifier])
+	{
         [toolbarItem setLabel: @"Export"];
         [toolbarItem setPaletteLabel: @"Export"];
         [toolbarItem setImage: [NSImage imageNamed: @"export"]];
         [toolbarItem setTarget: self];
         [toolbarItem setAction: @selector(ExportTheme:)];
-	} else { 
+	}
+	else
+	{ 
         toolbarItem = nil;
     }
+	
     return toolbarItem;
 }
 
 
 //The defualt Toolbar Setup
-- (NSArray *) toolbarDefaultItemIdentifiers: (NSToolbar *)aToolbar {
+- (NSArray *) toolbarDefaultItemIdentifiers: (NSToolbar *)aToolbar
+{
     return [NSArray arrayWithObjects: 
 	Item1ToolbarItemIdentifier, 
 	NSToolbarSeparatorItemIdentifier,
@@ -235,7 +229,8 @@ static NSString* Item2ToolbarItemIdentifier 	= @"Item 2 Item Identifier";
 }
 
 //Customize sheet
-- (NSArray *) toolbarAllowedItemIdentifiers: (NSToolbar *)aToolbar {
+- (NSArray *) toolbarAllowedItemIdentifiers: (NSToolbar *)aToolbar
+{
     return [NSArray arrayWithObjects: Item1ToolbarItemIdentifier, Item2ToolbarItemIdentifier,NSToolbarCustomizeToolbarItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, NSToolbarSpaceItemIdentifier, NSToolbarSeparatorItemIdentifier, nil];
 }
 
