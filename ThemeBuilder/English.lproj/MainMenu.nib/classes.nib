@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {ExportTheme = id; updateThemeView = id; }; 
+            CLASS = BTBController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                leftWell = id; 
+                mainWindow = id; 
+                middleWell = id; 
+                previewWell = id; 
+                rightWell = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}
