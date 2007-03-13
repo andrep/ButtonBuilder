@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2417AD430BA6262100BF3307 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2417AD420BA6262100BF3307 /* Sparkle.framework */; };
+		2417AD5D0BA6266F00BF3307 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2417AD420BA6262100BF3307 /* Sparkle.framework */; };
+		24206BE10BA6355600696D49 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D15AC360486D014006FF6A4 /* Info.plist */; };
 		652B83F606185B1500BEB316 /* BBThemeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 652B83F406185B1500BEB316 /* BBThemeHandler.h */; };
 		652B83F706185B1500BEB316 /* BBThemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 652B83F506185B1500BEB316 /* BBThemeHandler.m */; };
 		6557D1060610A69300CF608E /* bbicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6557D0FF0610A69300CF608E /* bbicon.icns */; };
@@ -51,8 +54,22 @@
 		};
 /* End PBXBuildRule section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2417AD590BA6264300BF3307 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2417AD5D0BA6266F00BF3307 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2417AD420BA6262100BF3307 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
 		2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
 		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -73,7 +90,7 @@
 		65DE3253061866FA00593D93 /* BBImageController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BBImageController.m; sourceTree = "<group>"; };
 		7BFE8BA00B70D747006FD7BA /* RevisionNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevisionNumber.h; sourceTree = "<group>"; };
 		7BFE8C4E0B70DAEF006FD7BA /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; name = Info.plist; path = ../../Info.plist; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D15AC370486D014006FF6A4 /* Button Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Button Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3D064C06426A81008013F9 /* NSImageView_subclass.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSImageView_subclass.h; sourceTree = "<group>"; };
 		CC3D064D06426A81008013F9 /* NSImageView_subclass.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSImageView_subclass.m; sourceTree = "<group>"; };
@@ -86,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				2417AD430BA6262100BF3307 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +118,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2417AD410BA6260100BF3307 /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2417AD420BA6262100BF3307 /* Sparkle.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
 		2A37F4AAFDCFA73011CA2CEA /* ButtonBuilder41 */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +134,7 @@
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
 				2A37F4C3FDCFA73011CA2CEA /* Dependencies */,
+				2417AD410BA6260100BF3307 /* Linked Frameworks */,
 				19C28FB0FE9D524F11CA2CBB /* Products */,
 			);
 			name = ButtonBuilder41;
@@ -192,6 +219,7 @@
 				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
+				2417AD590BA6264300BF3307 /* CopyFiles */,
 			);
 			buildRules = (
 				7BFE8B720B70D52E006FD7BA /* PBXBuildRule */,
@@ -236,6 +264,7 @@
 				6557D10B0610A69300CF608E /* caption.tiff in Resources */,
 				6557D10C0610A69300CF608E /* font.tiff in Resources */,
 				CCAC836C063FF2A00083FC5D /* Button Builder Help in Resources */,
+				24206BE10BA6355600696D49 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +326,11 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DEBUGGING_SYMBOLS = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
@@ -335,7 +368,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -369,6 +406,10 @@
 		37AB783D089A91380086F66D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				CURRENT_PROJECT_VERSION = 4.1;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
