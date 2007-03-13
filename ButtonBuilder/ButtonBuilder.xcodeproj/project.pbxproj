@@ -13,6 +13,8 @@
 		371E53B20BA7190700066874 /* HUDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 371E53B00BA7190700066874 /* HUDWindow.h */; };
 		371E53B30BA7190700066874 /* HUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 371E53B10BA7190700066874 /* HUDWindow.m */; };
 		371E53CB0BA719F200066874 /* hud_titlebar-close.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 371E53CA0BA719F200066874 /* hud_titlebar-close.tiff */; };
+		37F62A270BA7309200DF1EA7 /* hud_checkbox_off.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 37F62A250BA7309200DF1EA7 /* hud_checkbox_off.tiff */; };
+		37F62A280BA7309200DF1EA7 /* hud_checkbox_on.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 37F62A260BA7309200DF1EA7 /* hud_checkbox_on.tiff */; };
 		652B83F606185B1500BEB316 /* BBThemeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 652B83F406185B1500BEB316 /* BBThemeHandler.h */; };
 		652B83F706185B1500BEB316 /* BBThemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 652B83F506185B1500BEB316 /* BBThemeHandler.m */; };
 		6557D1060610A69300CF608E /* bbicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6557D0FF0610A69300CF608E /* bbicon.icns */; };
@@ -83,6 +85,8 @@
 		371E53B00BA7190700066874 /* HUDWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HUDWindow.h; sourceTree = "<group>"; };
 		371E53B10BA7190700066874 /* HUDWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HUDWindow.m; sourceTree = "<group>"; };
 		371E53CA0BA719F200066874 /* hud_titlebar-close.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_titlebar-close.tiff"; sourceTree = "<group>"; };
+		37F62A250BA7309200DF1EA7 /* hud_checkbox_off.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = hud_checkbox_off.tiff; sourceTree = "<group>"; };
+		37F62A260BA7309200DF1EA7 /* hud_checkbox_on.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = hud_checkbox_on.tiff; sourceTree = "<group>"; };
 		652B83F406185B1500BEB316 /* BBThemeHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BBThemeHandler.h; sourceTree = "<group>"; };
 		652B83F506185B1500BEB316 /* BBThemeHandler.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BBThemeHandler.m; sourceTree = "<group>"; };
 		6557D0FF0610A69300CF608E /* bbicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = bbicon.icns; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 		371E53B50BA7190D00066874 /* HUD Window */ = {
 			isa = PBXGroup;
 			children = (
+				37F62A250BA7309200DF1EA7 /* hud_checkbox_off.tiff */,
+				37F62A260BA7309200DF1EA7 /* hud_checkbox_on.tiff */,
 				371E53CA0BA719F200066874 /* hud_titlebar-close.tiff */,
 				371E53B00BA7190700066874 /* HUDWindow.h */,
 				371E53B10BA7190700066874 /* HUDWindow.m */,
@@ -292,6 +298,8 @@
 				CCAC836C063FF2A00083FC5D /* Button Builder Help in Resources */,
 				24206BE10BA6355600696D49 /* Info.plist in Resources */,
 				371E53CB0BA719F200066874 /* hud_titlebar-close.tiff in Resources */,
+				37F62A270BA7309200DF1EA7 /* hud_checkbox_off.tiff in Resources */,
+				37F62A280BA7309200DF1EA7 /* hud_checkbox_on.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
