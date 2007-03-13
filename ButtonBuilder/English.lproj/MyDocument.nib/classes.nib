@@ -18,7 +18,12 @@
             SUPERCLASS = NSObject; 
         }, 
         {CLASS = CenteredImageView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
         {CLASS = HUDWindow; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }, 
         {
             ACTIONS = {
