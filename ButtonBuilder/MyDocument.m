@@ -30,12 +30,7 @@
 //***************************************************************************
 
 //Set up the Toolbar name and the toolbar Items
-static NSString* ToolbarIdentifier				= @"Main Toolbar Identifier";
-static NSString* Item1ToolbarItemIdentifier 	= @"Options Identifier";
-static NSString* Item2ToolbarItemIdentifier 	= @"Font Identifier";
-static NSString* Item3ToolbarItemIdentifier 	= @"Caption Identifier";
-static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
-static NSString* Item5ToolbarItemIdentifier 	= @"Canvas Size";
+
 
 
 //***************************************************************************
@@ -282,14 +277,6 @@ static NSString* Item5ToolbarItemIdentifier 	= @"Canvas Size";
     [super windowControllerDidLoadNib:aController];
 	
 	//Toolbar:
-	NSToolbar *toolbar = [[[NSToolbar alloc] initWithIdentifier: ToolbarIdentifier] autorelease];
-    [toolbar setAllowsUserCustomization: YES];
-    [toolbar setAutosavesConfiguration: YES];
-    [toolbar setDisplayMode: NSToolbarDisplayModeIconAndLabel];
-    [toolbar setDelegate: self];
-    [documentWindow setToolbar: toolbar];
-	
-		
 	//Sets up the interface on load document:)
 	if (loadedData)
 	{
@@ -430,6 +417,7 @@ static NSString* Item5ToolbarItemIdentifier 	= @"Canvas Size";
 	return YES;
 }
 
+@end
 
 //////////////////////////////////////////////////////
 //
@@ -437,72 +425,7 @@ static NSString* Item5ToolbarItemIdentifier 	= @"Canvas Size";
 //
 ///////////////////////////////////////////////////////
 //We layout the toolbars here
-- (NSToolbarItem *) toolbar: (NSToolbar *)aToolbar itemForItemIdentifier: (NSString *) itemIdent willBeInsertedIntoToolbar:(BOOL) willBeInserted {
-    NSToolbarItem *toolbarItem = [[[NSToolbarItem alloc] initWithItemIdentifier: itemIdent] autorelease];
-  
-      if ([itemIdent isEqualToString:Item1ToolbarItemIdentifier]) {
-        [toolbarItem setLabel: @"Themes"];
-        [toolbarItem setPaletteLabel: @"Themes"];
-        [toolbarItem setImage: [NSImage imageNamed: @"options.tiff"]];
-        [toolbarItem setTarget: self];
-        [toolbarItem setAction: @selector(toggleThemeWindow:)];
-    } else if ([itemIdent isEqual: Item2ToolbarItemIdentifier]) {
-        [toolbarItem setLabel: @"Title"];
-        [toolbarItem setPaletteLabel: @"title"];
-        [toolbarItem setImage: [NSImage imageNamed: @"caption.tiff"]];
-        [toolbarItem setTarget: self];
-        [toolbarItem setAction: @selector(showCaptionWindow:)];
-	} else if ([itemIdent isEqual: Item3ToolbarItemIdentifier]) {
-        [toolbarItem setLabel: @"Font"];
-        [toolbarItem setPaletteLabel: @"Font"];
-        [toolbarItem setImage: [NSImage imageNamed: @"font.tiff"]];
-        [toolbarItem setTarget: self];
-        [toolbarItem setAction: @selector(setFont:)];
-	} else if ([itemIdent isEqual: Item4ToolbarItemIdentifier]) {
-        [toolbarItem setLabel: @"Export"];
-        [toolbarItem setPaletteLabel: @"Export"];
-        [toolbarItem setImage: [NSImage imageNamed: @"export.tiff"]];
-        [toolbarItem setTarget: self];
-        [toolbarItem setAction: @selector(exportImageAs:)];
-	} else if ([itemIdent isEqual: Item5ToolbarItemIdentifier]) {
-        [toolbarItem setLabel: @"Options"];
-        [toolbarItem setPaletteLabel: @"Options"];
-        [toolbarItem setImage: [NSImage imageNamed: @"canvasSize.tiff"]];
-        [toolbarItem setTarget: self];
-        [toolbarItem setAction: @selector(showOptionsWindow:)];
-    } else { 
-        toolbarItem = nil;
-    }
-    return toolbarItem;
-}
 
-//The defualt Toolbar Setup
-- (NSArray *) toolbarDefaultItemIdentifiers: (NSToolbar *)aToolbar {
-    return [NSArray arrayWithObjects: 
-    Item1ToolbarItemIdentifier, 
-    NSToolbarSeparatorItemIdentifier, 
-    Item2ToolbarItemIdentifier,
-    Item3ToolbarItemIdentifier, 
-	Item5ToolbarItemIdentifier, 
-	NSToolbarFlexibleSpaceItemIdentifier,
-	Item4ToolbarItemIdentifier, 
-	nil];
-}
 
-//Customize sheet
-- (NSArray *) toolbarAllowedItemIdentifiers: (NSToolbar *)aToolbar {
-    return [NSArray arrayWithObjects: 
-    Item1ToolbarItemIdentifier, 
-    Item2ToolbarItemIdentifier,
-    Item3ToolbarItemIdentifier,
-    Item4ToolbarItemIdentifier,
-	Item5ToolbarItemIdentifier,
-    NSToolbarCustomizeToolbarItemIdentifier, 
-    NSToolbarFlexibleSpaceItemIdentifier, 
-    NSToolbarSpaceItemIdentifier, 
-    NSToolbarSeparatorItemIdentifier, nil];
-}
-
-@end
 
 //***************************************************************************
