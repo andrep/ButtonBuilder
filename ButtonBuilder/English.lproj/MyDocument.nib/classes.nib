@@ -18,13 +18,14 @@
             SUPERCLASS = NSObject; 
         }, 
         {CLASS = CenteredImageView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {CLASS = EtchedText; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = EtchedTextCell; LANGUAGE = ObjC; SUPERCLASS = NSTextFieldCell; }, 
         {
             ACTIONS = {"" = id; }; 
             CLASS = FirstResponder; 
             LANGUAGE = ObjC; 
             SUPERCLASS = NSObject; 
         }, 
-        {CLASS = HUDWindow; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }, 
         {
             ACTIONS = {
                 exportImageAs = id; 
@@ -59,7 +60,25 @@
             }; 
             SUPERCLASS = NSDocument; 
         }, 
+        {CLASS = NFHUDButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = NFHUDButtonCell; LANGUAGE = ObjC; SUPERCLASS = NSButtonCell; }, 
+        {CLASS = NFHUDPopUpButton; LANGUAGE = ObjC; SUPERCLASS = NSPopUpButton; }, 
+        {
+            CLASS = NFHUDPopUpButtonCell; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSPopUpButtonCell; 
+        }, 
+        {CLASS = NFHUDSlider; LANGUAGE = ObjC; SUPERCLASS = NSSlider; }, 
+        {CLASS = NFHUDSliderCell; LANGUAGE = ObjC; SUPERCLASS = NSSliderCell; }, 
+        {CLASS = NFHUDWindow; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }, 
+        {CLASS = NFIButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = NFIButtonCell; LANGUAGE = ObjC; SUPERCLASS = NSButtonCell; }, 
+        {CLASS = NFIPopUpButton; LANGUAGE = ObjC; SUPERCLASS = NSPopUpButton; }, 
+        {CLASS = NFIPopUpButtonCell; LANGUAGE = ObjC; SUPERCLASS = NSPopUpButtonCell; }, 
+        {CLASS = NFIWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {CLASS = NSFrameView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
         {CLASS = "NSImageView_subclass"; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {CLASS = NSTitledFrame; LANGUAGE = ObjC; SUPERCLASS = NSFrameView; }, 
         {
             ACTIONS = {registerApp = id; useDemo = id; visitWebsite = id; }; 
             CLASS = RMRegistration; 
