@@ -10,11 +10,8 @@
 		2417AD430BA6262100BF3307 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2417AD420BA6262100BF3307 /* Sparkle.framework */; };
 		2417AD5D0BA6266F00BF3307 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2417AD420BA6262100BF3307 /* Sparkle.framework */; };
 		24206BE10BA6355600696D49 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D15AC360486D014006FF6A4 /* Info.plist */; };
-		371E53B20BA7190700066874 /* HUDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 371E53B00BA7190700066874 /* HUDWindow.h */; };
-		371E53B30BA7190700066874 /* HUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 371E53B10BA7190700066874 /* HUDWindow.m */; };
-		371E53CB0BA719F200066874 /* hud_titlebar-close.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 371E53CA0BA719F200066874 /* hud_titlebar-close.tiff */; };
-		37F62A270BA7309200DF1EA7 /* hud_checkbox_off.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 37F62A250BA7309200DF1EA7 /* hud_checkbox_off.tiff */; };
-		37F62A280BA7309200DF1EA7 /* hud_checkbox_on.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 37F62A260BA7309200DF1EA7 /* hud_checkbox_on.tiff */; };
+		375E51A20BA9A5C300079395 /* iLifeControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375E51A10BA9A5C300079395 /* iLifeControls.framework */; };
+		375E52CA0BA9A69400079395 /* iLifeControls.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 375E51A10BA9A5C300079395 /* iLifeControls.framework */; };
 		652B83F606185B1500BEB316 /* BBThemeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 652B83F406185B1500BEB316 /* BBThemeHandler.h */; };
 		652B83F706185B1500BEB316 /* BBThemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 652B83F506185B1500BEB316 /* BBThemeHandler.m */; };
 		6557D1060610A69300CF608E /* bbicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6557D0FF0610A69300CF608E /* bbicon.icns */; };
@@ -66,6 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				375E52CA0BA9A69400079395 /* iLifeControls.framework in CopyFiles */,
 				2417AD5D0BA6266F00BF3307 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,11 +80,7 @@
 		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		32DBCF750370BD2300C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		371E53B00BA7190700066874 /* HUDWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HUDWindow.h; sourceTree = "<group>"; };
-		371E53B10BA7190700066874 /* HUDWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HUDWindow.m; sourceTree = "<group>"; };
-		371E53CA0BA719F200066874 /* hud_titlebar-close.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_titlebar-close.tiff"; sourceTree = "<group>"; };
-		37F62A250BA7309200DF1EA7 /* hud_checkbox_off.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = hud_checkbox_off.tiff; sourceTree = "<group>"; };
-		37F62A260BA7309200DF1EA7 /* hud_checkbox_on.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = hud_checkbox_on.tiff; sourceTree = "<group>"; };
+		375E51A10BA9A5C300079395 /* iLifeControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iLifeControls.framework; sourceTree = "<group>"; };
 		652B83F406185B1500BEB316 /* BBThemeHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BBThemeHandler.h; sourceTree = "<group>"; };
 		652B83F506185B1500BEB316 /* BBThemeHandler.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BBThemeHandler.m; sourceTree = "<group>"; };
 		6557D0FF0610A69300CF608E /* bbicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = bbicon.icns; sourceTree = "<group>"; };
@@ -114,6 +108,7 @@
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
 				2417AD430BA6262100BF3307 /* Sparkle.framework in Frameworks */,
+				375E51A20BA9A5C300079395 /* iLifeControls.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +126,7 @@
 		2417AD410BA6260100BF3307 /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				375E51A10BA9A5C300079395 /* iLifeControls.framework */,
 				2417AD420BA6262100BF3307 /* Sparkle.framework */,
 			);
 			name = "Linked Frameworks";
@@ -142,7 +138,6 @@
 				7BFE8C4E0B70DAEF006FD7BA /* LICENSE.txt */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
-				371E53B60BA7193D00066874 /* Interface */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
 				2A37F4C3FDCFA73011CA2CEA /* Dependencies */,
 				2417AD410BA6260100BF3307 /* Linked Frameworks */,
@@ -203,26 +198,6 @@
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		371E53B50BA7190D00066874 /* HUD Window */ = {
-			isa = PBXGroup;
-			children = (
-				37F62A250BA7309200DF1EA7 /* hud_checkbox_off.tiff */,
-				37F62A260BA7309200DF1EA7 /* hud_checkbox_on.tiff */,
-				371E53CA0BA719F200066874 /* hud_titlebar-close.tiff */,
-				371E53B00BA7190700066874 /* HUDWindow.h */,
-				371E53B10BA7190700066874 /* HUDWindow.m */,
-			);
-			name = "HUD Window";
-			sourceTree = "<group>";
-		};
-		371E53B60BA7193D00066874 /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				371E53B50BA7190D00066874 /* HUD Window */,
-			);
-			name = Interface;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -236,7 +211,6 @@
 				65DE3254061866FA00593D93 /* BBImageController.h in Headers */,
 				CC3D064E06426A81008013F9 /* NSImageView_subclass.h in Headers */,
 				7BFE8BA10B70D747006FD7BA /* RevisionNumber.h in Headers */,
-				371E53B20BA7190700066874 /* HUDWindow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,9 +271,6 @@
 				6557D10C0610A69300CF608E /* font.tiff in Resources */,
 				CCAC836C063FF2A00083FC5D /* Button Builder Help in Resources */,
 				24206BE10BA6355600696D49 /* Info.plist in Resources */,
-				371E53CB0BA719F200066874 /* hud_titlebar-close.tiff in Resources */,
-				37F62A270BA7309200DF1EA7 /* hud_checkbox_off.tiff in Resources */,
-				37F62A280BA7309200DF1EA7 /* hud_checkbox_on.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +286,6 @@
 				652B83F706185B1500BEB316 /* BBThemeHandler.m in Sources */,
 				65DE3255061866FA00593D93 /* BBImageController.m in Sources */,
 				CC3D064F06426A81008013F9 /* NSImageView_subclass.m in Sources */,
-				371E53B30BA7190700066874 /* HUDWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,8 +334,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
@@ -406,8 +378,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
