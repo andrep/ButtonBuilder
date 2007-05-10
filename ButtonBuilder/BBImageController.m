@@ -94,7 +94,7 @@
 		NSPoint theTextPos;
 		NSSize stringSize;
 		stringSize = [theString sizeWithAttributes:attributes];
-		theTextPos.x = 0 + ([documentController buttonWidth] - stringSize.width)/2;
+		theTextPos.x = 0 + ([documentController buttonWidth] - stringSize.width)/[documentController getFontPosx];
 		theTextPos.y = 0 + (buttonHeight - stringSize.height)/2 + [documentController getFontPos];
 		
 		if ([documentController shadowDisplay] == 0){
@@ -139,7 +139,7 @@
 	}
 	[finalImage unlockFocus];
 	
-	NSString *myString = [NSString stringWithFormat:@"%ix%i Pixels",(int)[finalImage size].width,(int)[finalImage size].height];
+	NSString *myString = [NSString stringWithFormat:@"Size: %ix%i Pixels",(int)[finalImage size].width,(int)[finalImage size].height];
 	[sizeTextField setStringValue: myString];
 
 	return finalImage;
