@@ -52,7 +52,6 @@
 	return [themeArray count];
 }
 
-
 - (int)getRowNumber
 {
 	return [themeTableView selectedRow];
@@ -85,11 +84,7 @@
 
 -(NSImage*)getRightImage
 {
-	NSImage* rightImage = [[NSImage alloc] 
-	
-	initWithContentsOfFile:[[NSString stringWithFormat:@"~/Library/Application Support/Button Builder/%@/button_right.png",[themeArray objectAtIndex:[themeTableView selectedRow]]] stringByExpandingTildeInPath]];
-	
-	
+	NSImage* rightImage = [[NSImage alloc] initWithContentsOfFile:[[NSString stringWithFormat:@"~/Library/Application Support/Button Builder/%@/button_right.png",[themeArray objectAtIndex:[themeTableView selectedRow]]] stringByExpandingTildeInPath]];
 	return rightImage;
 }
 
