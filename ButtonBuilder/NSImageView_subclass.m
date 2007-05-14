@@ -56,6 +56,11 @@
 	NSLog (@"Resize");
 }
 
+- (BOOL)mouseDownCanMoveWindow
+{
+	return YES;
+}
+
 @end
 
 //***************************************************************************

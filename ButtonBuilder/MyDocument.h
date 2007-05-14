@@ -27,10 +27,8 @@
 @interface MyDocument : NSDocument
 {
 	//Windows
-	IBOutlet NSWindow   *documentWindow;
-	IBOutlet id themeWindow;
-	IBOutlet id captionWindow;
-	IBOutlet id optionsWindow;
+	IBOutlet NFIWindow *documentWindow;
+	IBOutlet id inspectorWindow;
 	IBOutlet id saveOptionView;
 	
 	//Controllers
@@ -48,8 +46,16 @@
 	IBOutlet id bgcolorWell;
 	IBOutlet id shadowCheckBox;
 	IBOutlet id fontPosStepper;
+	IBOutlet id	fontPos;
+	IBOutlet id fontPosxStepper;
 	IBOutlet id opacitySlider;
 	IBOutlet id	exportPopUp;
+	
+	IBOutlet id	positionTextField;
+	IBOutlet id	verticalTextField;
+	IBOutlet id	opacityTextField;
+	IBOutlet id	widthTextField;
+	IBOutlet id	scaleTextField;
 	NSMutableDictionary *saveData;
 	NSDictionary *loadedData;
 	
@@ -64,13 +70,8 @@
 - (IBAction) updateCanvas:(id)sender;
 - (IBAction) updateBGCanvas:(id)sender;
 - (IBAction) exportImageAs:(id)sender;
-- (IBAction) hideCaptionWindow:(id)sender;
-- (IBAction) hideOptionsWindow:(id)sender;
 - (IBAction) exportPopUpAction:(id)sender;
 
-- (void) toggleThemeWindow:(id)sender;
-- (void) showCaptionWindow:(id)sender;
-- (void) showOptionsWindow:(id)sender;
 - (float) buttonSize;
 - (float) buttonOpacity;
 - (int) buttonWidth;
@@ -85,6 +86,7 @@
 - (int) shadowDisplay;
 - (void) setSliderValue:(float)i;
 - (int) getFontPos;
+- (int) getFontPosx;
 	
 @end
 

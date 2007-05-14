@@ -1,6 +1,21 @@
 {
     IBClasses = (
+        {CLASS = EtchedText; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = EtchedTextCell; LANGUAGE = ObjC; SUPERCLASS = NSTextFieldCell; }, 
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSFrameView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = NSTitledFrame; LANGUAGE = ObjC; SUPERCLASS = NSFrameView; }, 
+        {
+            ACTIONS = {toggleActivePreferenceView = id; }; 
+            CLASS = PreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                activeContentView = NSView; 
+                generalPreferenceView = NSView; 
+                updatesPreferenceView = NSView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
         {
             ACTIONS = {registerApp = id; useDemo = id; visitWebsite = id; }; 
             CLASS = RMRegistration; 

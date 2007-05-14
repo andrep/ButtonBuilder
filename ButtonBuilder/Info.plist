@@ -56,6 +56,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
-	<string>http://www.realmacforge.com/blahblah.xml</string>
+	<string>http://www.realmacsoftware.com/feeds/rapidweaverupdate.xml</string>
 </dict>
 </plist>

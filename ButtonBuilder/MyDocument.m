@@ -45,7 +45,6 @@
     }
 
 	[themeHandler loadThemes];
-	[themeWindow toggle:self];
 	
 	//Calls the refresh canvas action
 	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
@@ -55,17 +54,28 @@
 	[[NSColorPanel sharedColorPanel] setShowsAlpha:YES];
 	
 	currentFont = [NSFont fontWithName:@"Lucida Grande Bold" size:24.0];
-	[self updateCanvas:self];
+	//[self updateCanvas:self];
 	[self updateBGCanvas:self];
 	
 	//PUT UPDATE CODE HERE FOR CANVAS
-	[documentWindow setContentSize:NSMakeSize(490,350)];
+	[documentWindow setContentSize:NSMakeSize(668,387)];
 	
-}
-
-- (void)toggleThemeWindow:(id)sender
-{
-	[themeWindow toggle:self];
+	//Center windows if first launch
+	if (![myFileManager fileExistsAtPath:[@"~/Library/Preferences/com.realmacsoftware.ButtonBuilder4.plist" stringByExpandingTildeInPath]]) {
+		[documentWindow center];
+		[inspectorWindow center];
+	}
+	
+	//Set last update text field if not yet run
+	if ([[NSUserDefaults standardUserDefaults] objectForKey:@"SULastCheckTime"] == nil) {
+		[[NSUserDefaults standardUserDefaults] setObject:@"Not Yet Run" forKey:@"SULastCheckTime"];
+	}
+		
+	//Height for title & footer bar
+	[documentWindow setTitleBarHeight:25];
+	[documentWindow setBottomBarHeight:30];
+	[documentWindow setPreservesContentDuringLiveResize:NO];
+	
 }
 
 //Get Button Caption
@@ -113,38 +123,6 @@
 	[widthSlider setMinValue:i];
 }
 
-//Show Captions Window
-- (void)showCaptionWindow:(id)sender
-{
-    [NSApp beginSheet:captionWindow
-    modalForWindow:documentWindow
-    modalDelegate:self
-    didEndSelector:nil
-    contextInfo:nil];
-}
-
-- (IBAction)hideCaptionWindow:(id)sender
-{
-    [NSApp endSheet:captionWindow];
-    [captionWindow orderOut:nil];
-}
-
-//Show Options Window
-- (void)showOptionsWindow:(id)sender
-{
-    [NSApp beginSheet:optionsWindow
-    modalForWindow:documentWindow
-    modalDelegate:self
-    didEndSelector:nil
-    contextInfo:nil];
-}
-
-- (IBAction)hideOptionsWindow:(id)sender
-{
-    [NSApp endSheet:optionsWindow];
-    [optionsWindow orderOut:nil];
-}
-
 
 - (IBAction)updateBGCanvas:(id)sender;
 {
@@ -172,6 +150,12 @@
 	[[imageController finalImage] release];
 	[documentWindow setDocumentEdited:YES];
 	[self updateChangeCount:NSChangeDone];
+	
+	[positionTextField setStringValue:[NSString stringWithFormat:@"%f", [fontPosxStepper intValue]]];
+	[verticalTextField setStringValue:[NSString stringWithFormat:@"%f", [fontPosStepper intValue]]];
+	[opacityTextField setStringValue:[NSString stringWithFormat:@"%f", [opacitySlider floatValue]]];
+	[widthTextField setStringValue:[NSString stringWithFormat:@"%f", [widthSlider intValue]]];
+	[scaleTextField setStringValue:[NSString stringWithFormat:@"%f", [scaleSlider floatValue]]];
 
 }
 
@@ -315,6 +299,7 @@
 {
 	[[NSFontManager sharedFontManager] setSelectedFont:[NSFont fontWithName:[self getFontName] size:[self getFontSize]] isMultiple:NO];
 	[[NSFontManager sharedFontManager] orderFrontFontPanel:self];
+	[[NSFontPanel sharedFontPanel] makeKeyAndOrderFront:sender];
 }
 
 ////Accessor method to change currentFont
@@ -346,6 +331,16 @@
 - (int)getFontPos
 {
  return [fontPosStepper intValue];
+}
+
+- (int)getFontPosx
+{
+	if ([fontPos indexOfSelectedItem] == 0)
+		return 4 + [fontPosxStepper intValue];
+	else if ([fontPos indexOfSelectedItem] == 1)
+		return 2 + [fontPosxStepper intValue];
+	else
+		return 1 - [fontPosxStepper intValue];
 }
 
 //////////////////////////////////////////////////////
@@ -418,14 +413,5 @@
 }
 
 @end
-
-//////////////////////////////////////////////////////
-//
-// Toolbar Code starts here 
-//
-///////////////////////////////////////////////////////
-//We layout the toolbars here
-
-
 
 //***************************************************************************

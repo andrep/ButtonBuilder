@@ -1,13 +1,14 @@
 {
     IBClasses = (
+        {CLASS = AboutNameText; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = AboutVersionText; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
         {
             CLASS = BBImageController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
-                documentController = id; 
-                regController = id; 
-                sizeTextField = id; 
-                themeHandler = id; 
+                documentController = MyDocument; 
+                sizeTextField = NSTextField; 
+                themeHandler = BBThemeHandler; 
             }; 
             SUPERCLASS = NSObject; 
         }, 
@@ -17,7 +18,6 @@
             OUTLETS = {documentController = id; themeTableView = id; }; 
             SUPERCLASS = NSObject; 
         }, 
-        {CLASS = CenteredImageView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
         {CLASS = EtchedText; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
         {CLASS = EtchedTextCell; LANGUAGE = ObjC; SUPERCLASS = NSTextFieldCell; }, 
         {
@@ -26,12 +26,13 @@
             LANGUAGE = ObjC; 
             SUPERCLASS = NSObject; 
         }, 
+        {CLASS = ImageView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
         {
             ACTIONS = {
                 exportImageAs = id; 
                 exportPopUpAction = id; 
-                hideCaptionWindow = id; 
-                hideOptionsWindow = id; 
+                setFont = id; 
+                showAboutWindow = id; 
                 updateBGCanvas = id; 
                 updateCanvas = id; 
             }; 
@@ -41,22 +42,27 @@
                 bgCanvas = id; 
                 bgcolorWell = id; 
                 captionTextView = id; 
-                captionWindow = id; 
-                documentWindow = id; 
+                documentWindow = NFIWindow; 
                 exportPopUp = id; 
+                fontPos = id; 
                 fontPosStepper = id; 
+                fontPosxStepper = id; 
                 imageCanvas = id; 
                 imageController = id; 
+                inspectorWindow = id; 
                 opacitySlider = id; 
-                optionsWindow = id; 
+                opacityTextField = id; 
                 overlayColorWell = id; 
+                positionTextField = id; 
                 saveOptionView = id; 
                 scaleSlider = id; 
+                scaleTextField = id; 
                 shadowCheckBox = id; 
                 textColorWell = id; 
                 themeHandler = id; 
-                themeWindow = id; 
+                verticalTextField = id; 
                 widthSlider = id; 
+                widthTextField = id; 
             }; 
             SUPERCLASS = NSDocument; 
         }, 
@@ -80,12 +86,17 @@
         {CLASS = "NSImageView_subclass"; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
         {CLASS = NSTitledFrame; LANGUAGE = ObjC; SUPERCLASS = NSFrameView; }, 
         {
-            ACTIONS = {registerApp = id; useDemo = id; visitWebsite = id; }; 
-            CLASS = RMRegistration; 
+            ACTIONS = {toggleActivePreferenceView = id; }; 
+            CLASS = PreferencesController; 
             LANGUAGE = ObjC; 
-            OUTLETS = {licenseCodeField = id; registerWindow = id; }; 
-            SUPERCLASS = NSObject; 
-        }
+            OUTLETS = {
+                activeContentView = NSView; 
+                generalPreferenceView = NSView; 
+                updatesPreferenceView = NSView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = TableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }
     ); 
     IBVersion = 1; 
 }
