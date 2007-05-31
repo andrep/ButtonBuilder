@@ -1,0 +1,13 @@
+//BBLauncherPlugin
+
+"PluginName" = "Button Builder Launcher";
+"PluginDescription" = "Does Exactly What It Says It Does, Which Is A Quick Way To Launch Button Builder.\n By www.vortex-themes.com.";
+"AuthorName" = "Ollie Levy";
+
+//BBLauncherMenu
+
+"OpenTitle" = "Button Builder";
+"OpenButton" = "Open";
+"CancelButton" = "Cancel";
+"DownloadButton" = "Download";
+"OpenMessage" = "Pressing \"Open\" will launch \"Button Builder\" if you do not currently have it installed please press \"Download\".";

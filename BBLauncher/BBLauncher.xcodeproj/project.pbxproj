@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C736B6B094C726A001443E6 /* BBLauncherPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 86EC470A0681049D00EF9A10 /* BBLauncherPlugin.h */; };
+		9C736B6D094C726A001443E6 /* BBLauncher.nib in Resources */ = {isa = PBXBuildFile; fileRef = 3771366E0917AC52009CB342 /* BBLauncher.nib */; };
+		9C736B71094C726A001443E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3778116A0917CBE000E538D6 /* Localizable.strings */; };
+		9C736B73094C726A001443E6 /* BBLauncherPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EC470B0681049D00EF9A10 /* BBLauncherPlugin.m */; };
+		9C736B75094C726A001443E6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86EC48AB06813ED400EF9A10 /* Cocoa.framework */; };
+		9C736B85094C7280001443E6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C736B84094C7280001443E6 /* Info.plist */; };
+		A09EACDF0BDBCEAD0034DAA9 /* RWPluginUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09EACDE0BDBCEAD0034DAA9 /* RWPluginUtilities.framework */; };
+		A0B143F60B501C1E00B40661 /* BBLauncherMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B143F30B501C1E00B40661 /* BBLauncherMenu.h */; };
+		A0B143F70B501C1E00B40661 /* BBLauncherMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B143F50B501C1E00B40661 /* BBLauncherMenu.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		377811660917CBDB00E538D6 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		86EC470A0681049D00EF9A10 /* BBLauncherPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBLauncherPlugin.h; sourceTree = "<group>"; };
+		86EC470B0681049D00EF9A10 /* BBLauncherPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBLauncherPlugin.m; sourceTree = "<group>"; };
+		86EC478E06811B8300EF9A10 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/BBLauncher.nib; sourceTree = "<group>"; };
+		86EC48AB06813ED400EF9A10 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		9C736B80094C726A001443E6 /* BBLauncher.rwplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBLauncher.rwplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C736B84094C7280001443E6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		A09EACDE0BDBCEAD0034DAA9 /* RWPluginUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RWPluginUtilities.framework; path = /Applications/RapidWeaver.app/Contents/Frameworks/RWPluginUtilities.framework; sourceTree = "<absolute>"; };
+		A0B143F30B501C1E00B40661 /* BBLauncherMenu.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BBLauncherMenu.h; sourceTree = "<group>"; };
+		A0B143F50B501C1E00B40661 /* BBLauncherMenu.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BBLauncherMenu.m; sourceTree = "<group>"; };
+		A0B56BA20BD568D60097F2BD /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C736B74094C726A001443E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C736B75094C726A001443E6 /* Cocoa.framework in Frameworks */,
+				A09EACDF0BDBCEAD0034DAA9 /* RWPluginUtilities.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86EC46E80681018500EF9A10 = {
+			isa = PBXGroup;
+			children = (
+				A0B56BA20BD568D60097F2BD /* LICENSE.txt */,
+				A0B56BA40BD568D90097F2BD /* Classes */,
+				86EC483306812DE600EF9A10 /* Resources */,
+				86EC48B406813EDD00EF9A10 /* Frameworks */,
+				86EC479A06811BCE00EF9A10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86EC479A06811BCE00EF9A10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C736B80094C726A001443E6 /* BBLauncher.rwplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86EC483306812DE600EF9A10 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3771366E0917AC52009CB342 /* BBLauncher.nib */,
+				9C736B84094C7280001443E6 /* Info.plist */,
+				3778116A0917CBE000E538D6 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		86EC48B406813EDD00EF9A10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A09EACDE0BDBCEAD0034DAA9 /* RWPluginUtilities.framework */,
+				86EC48AB06813ED400EF9A10 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0B56BA40BD568D90097F2BD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				86EC470A0681049D00EF9A10 /* BBLauncherPlugin.h */,
+				86EC470B0681049D00EF9A10 /* BBLauncherPlugin.m */,
+				A0B143F30B501C1E00B40661 /* BBLauncherMenu.h */,
+				A0B143F50B501C1E00B40661 /* BBLauncherMenu.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9C736B6A094C726A001443E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C736B6B094C726A001443E6 /* BBLauncherPlugin.h in Headers */,
+				A0B143F60B501C1E00B40661 /* BBLauncherMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9C736B69094C726A001443E6 /* BBLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C736B7B094C726A001443E6 /* Build configuration list for PBXNativeTarget "BBLauncher" */;
+			buildPhases = (
+				9C736B6A094C726A001443E6 /* Headers */,
+				9C736B6C094C726A001443E6 /* Resources */,
+				9C736B72094C726A001443E6 /* Sources */,
+				9C736B74094C726A001443E6 /* Frameworks */,
+				9C736B79094C726A001443E6 /* Rez */,
+				9C736B7A094C726A001443E6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBLauncher;
+			productInstallPath = "$(USER_LIBRARY_DIR)/Bundles";
+			productName = Blog;
+			productReference = 9C736B80094C726A001443E6 /* BBLauncher.rwplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86EC46EC0681018500EF9A10 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 9C72E61C088EEA07007CC3F7 /* Build configuration list for PBXProject "BBLauncher" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 86EC46E80681018500EF9A10;
+			productRefGroup = 86EC479A06811BCE00EF9A10 /* Products */;
+			projectDirPath = "";
+			targets = (
+				9C736B69094C726A001443E6 /* BBLauncher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C736B6C094C726A001443E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C736B6D094C726A001443E6 /* BBLauncher.nib in Resources */,
+				9C736B71094C726A001443E6 /* Localizable.strings in Resources */,
+				9C736B85094C7280001443E6 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		9C736B79094C726A001443E6 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C736B7A094C726A001443E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# set\n\necho \"Removing the old plugin from the Application Support folder.\"\nrm -Rf ~/Library/Application\\ Support/RapidWeaver/${PRODUCT_NAME}.rwplugin\nif [ -d ~/Library/Application\\ Support/RapidWeaver/${PRODUCT_NAME}.rwplugin ]; then\n    echo \"Error: remove failed.\"\n    exit 1\nfi\n\necho \"Copying the plugin to the Application Support folder.\"\nif [ -d \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.rwplugin\" ]; then\n  cp -R \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.rwplugin\" ~/Library/Application\\ Support/RapidWeaver\n  echo \"installed to Applicaton support\"\nfi\n\nexit 0; ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C736B72094C726A001443E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C736B73094C726A001443E6 /* BBLauncherPlugin.m in Sources */,
+				A0B143F70B501C1E00B40661 /* BBLauncherMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3771366E0917AC52009CB342 /* BBLauncher.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86EC478E06811B8300EF9A10 /* English */,
+			);
+			name = BBLauncher.nib;
+			sourceTree = "<group>";
+		};
+		3778116A0917CBE000E538D6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				377811660917CBDB00E538D6 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C72E61D088EEA07007CC3F7 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_DEBUGGING_SYMBOLS = default;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_NAME = RWThemeMiner_Launcher;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		9C72E61E088EEA07007CC3F7 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_NAME = RWThemeMiner_Launcher;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Deployment;
+		};
+		9C72E61F088EEA07007CC3F7 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_NAME = RWThemeMiner_Launcher;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+		9C736B7C094C726A001443E6 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_3)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/RWPluginUtilities.framework/\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SYSTEM_APPS_DIR)/RapidWeaver.app/Contents/Frameworks\"";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RWThemeMiner_Launcher;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = rwplugin;
+			};
+			name = Development;
+		};
+		9C736B7D094C726A001443E6 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_APPS_DIR)/RapidWeaver.app/Contents/Frameworks\"";
+				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = "CURRENT_PROJECT_VERSION=$(CURRENT_PROJECT_VERSION)";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BBLauncher;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = rwplugin;
+			};
+			name = Deployment;
+		};
+		9C736B7E094C726A001443E6 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_3)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/RWPluginUtilities.framework/\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SYSTEM_APPS_DIR)/RapidWeaver.app/Contents/Frameworks\"";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RWThemeMiner_Launcher;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = rwplugin;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C72E61C088EEA07007CC3F7 /* Build configuration list for PBXProject "BBLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C72E61D088EEA07007CC3F7 /* Development */,
+				9C72E61E088EEA07007CC3F7 /* Deployment */,
+				9C72E61F088EEA07007CC3F7 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		9C736B7B094C726A001443E6 /* Build configuration list for PBXNativeTarget "BBLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C736B7C094C726A001443E6 /* Development */,
+				9C736B7D094C726A001443E6 /* Deployment */,
+				9C736B7E094C726A001443E6 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86EC46EC0681018500EF9A10 /* Project object */;
+}

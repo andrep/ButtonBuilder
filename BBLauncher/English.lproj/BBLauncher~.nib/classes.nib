@@ -1,0 +1,11 @@
+{
+    IBClasses = (
+        {CLASS = BBLauncherPlugin; LANGUAGE = ObjC; SUPERCLASS = RWAbstractPlugin; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RMCleanGreyView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = RMHTML; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RWAbstractPlugin; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RWHTMLView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }
+    ); 
+    IBVersion = 1; 
+}
