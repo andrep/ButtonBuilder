@@ -56,6 +56,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
-	<string>http://www.realmacsoftware.com/feeds/rapidweaverupdate.xml</string>
+	<string>http://nikf.org/buttonbuilder.xml</string>
 </dict>
 </plist>
