@@ -44,8 +44,8 @@
 }
 
 /* Override to force the size to be an even number of pixels.  View should be right inside of another custom view, so to just size the view to be as big as the superview.
-*/
 
+// I've commented this out as we don't want the view to be the same size as the window.
 - (void)resizeWithOldSuperviewSize:(NSSize)oldFrameSize
 {
 	NSRect tSuperRect=[[self superview] frame];
@@ -55,6 +55,7 @@
 	[self setFrame:tSuperRect];
 	NSLog (@"Resize");
 }
+*/
 
 - (BOOL)mouseDownCanMoveWindow
 {
