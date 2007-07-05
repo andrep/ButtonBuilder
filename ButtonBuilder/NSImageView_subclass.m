@@ -57,6 +57,7 @@
 }
 */
 
+
 - (BOOL)mouseDownCanMoveWindow
 {
 	return YES;
