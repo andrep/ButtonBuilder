@@ -153,10 +153,11 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 	[documentWindow setDocumentEdited:YES];
 	[self updateChangeCount:NSChangeDone];
 	
-	[positionTextField setStringValue:[NSString stringWithFormat:@"%f", [fontPosxStepper intValue]]];
-	[verticalTextField setStringValue:[NSString stringWithFormat:@"%f", [fontPosStepper intValue]]];
+	[positionTextField setStringValue:[NSString stringWithFormat:@"%i", [fontPosxStepper intValue]]];
+	[verticalTextField setStringValue:[NSString stringWithFormat:@"%i", [fontPosStepper intValue]]];
+	
 	[opacityTextField setStringValue:[NSString stringWithFormat:@"%f", [opacitySlider floatValue]]];
-	[widthTextField setStringValue:[NSString stringWithFormat:@"%f", [widthSlider intValue]]];
+	[widthTextField setStringValue:[NSString stringWithFormat:@"%i", [widthSlider intValue]]];
 	[scaleTextField setStringValue:[NSString stringWithFormat:@"%f", [scaleSlider floatValue]]];
 
 }
