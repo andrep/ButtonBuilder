@@ -40,7 +40,7 @@
 	[inImage setSize:theSize];
 
 	[super setImage: inImage];	// store the main image
-	NSLog (@"Setimage");
+	//NSLog (@"Setimage"); We really don't need to print this out all the time.
 }
 
 /* Override to force the size to be an even number of pixels.  View should be right inside of another custom view, so to just size the view to be as big as the superview.
