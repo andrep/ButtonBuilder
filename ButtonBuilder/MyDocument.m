@@ -432,13 +432,13 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
       if ([itemIdent isEqualToString:Item1ToolbarItemIdentifier]) {
         [toolbarItem setLabel: @"Theme"];
         [toolbarItem setPaletteLabel: @"Theme"];
-        [toolbarItem setImage: [NSImage imageNamed: @"options.tiff"]];
+        [toolbarItem setImage: [NSImage imageNamed: @"themes.png"]];
         [toolbarItem setTarget: self];
         [toolbarItem setAction: @selector(toggleThemeWindow:)];
    	} else if ([itemIdent isEqual: Item2ToolbarItemIdentifier]) {
         [toolbarItem setLabel: @"Font"];
         [toolbarItem setPaletteLabel: @"Font"];
-        [toolbarItem setImage: [NSImage imageNamed: @"font.tiff"]];
+        [toolbarItem setImage: [NSImage imageNamed: @"font.png"]];
         [toolbarItem setTarget: self];
         [toolbarItem setAction: @selector(setFont:)];
 	} else if ([itemIdent isEqual: Item3ToolbarItemIdentifier]) {
