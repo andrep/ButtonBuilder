@@ -71,6 +71,7 @@
 - (IBAction) updateBGCanvas:(id)sender;
 - (IBAction) exportImageAs:(id)sender;
 - (IBAction) exportPopUpAction:(id)sender;
+- (IBAction) showInspectorWindow:(id)sender;
 
 - (float) buttonSize;
 - (float) buttonOpacity;

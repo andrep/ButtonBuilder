@@ -255,6 +255,12 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 	}
 }
 
+//Display Button Inspector
+- (IBAction) showInspectorWindow:(id)sender
+{
+	[inspectorWindow makeKeyAndOrderFront:nil];
+}
+
 //Launch: WindowController has loaded
 - (void)windowControllerDidLoadNib:(NSWindowController *) aController
 {
@@ -448,11 +454,11 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
         [toolbarItem setTarget: self];
         [toolbarItem setAction: @selector(exportImageAs:)];
 	} else if ([itemIdent isEqual: Item4ToolbarItemIdentifier]) {
-        [toolbarItem setLabel: @"Options"];
+        [toolbarItem setLabel: @"Adjust"];
         [toolbarItem setPaletteLabel: @"Options"];
         [toolbarItem setImage: [NSImage imageNamed: @"hud.png"]];
         [toolbarItem setTarget: self];
-        [toolbarItem setAction: @selector(showOptionsWindow:)];
+        [toolbarItem setAction: @selector(showInspectorWindow:)];
     } else { 
         toolbarItem = nil;
     }
@@ -465,9 +471,9 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
     Item1ToolbarItemIdentifier, 
     NSToolbarSeparatorItemIdentifier, 
     Item2ToolbarItemIdentifier,
-    Item3ToolbarItemIdentifier, 
+    Item4ToolbarItemIdentifier, 
 	NSToolbarFlexibleSpaceItemIdentifier,
-	Item4ToolbarItemIdentifier, 
+	Item3ToolbarItemIdentifier, 
 	nil];
 }
 

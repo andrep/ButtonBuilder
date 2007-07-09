@@ -33,6 +33,7 @@
                 exportPopUpAction = id; 
                 setFont = id; 
                 showAboutWindow = id; 
+                showInspectorWindow = id; 
                 updateBGCanvas = id; 
                 updateCanvas = id; 
             }; 
