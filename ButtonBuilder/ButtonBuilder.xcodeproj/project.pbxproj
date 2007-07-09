@@ -14,6 +14,7 @@
 		375E52CA0BA9A69400079395 /* iLifeControls.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 375E51A10BA9A5C300079395 /* iLifeControls.framework */; };
 		37668BB40C4295B100C581F0 /* font.png in Resources */ = {isa = PBXBuildFile; fileRef = 37668BB30C4295B100C581F0 /* font.png */; };
 		37668BB90C42966000C581F0 /* themes.png in Resources */ = {isa = PBXBuildFile; fileRef = 37668BB80C42966000C581F0 /* themes.png */; };
+		376692F90C4296F800C581F0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 376692F80C4296F800C581F0 /* Localizable.strings */; };
 		37FC6A110C3D1F76003A0D5B /* hud.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FC6A0F0C3D1F76003A0D5B /* hud.png */; };
 		37FC6A120C3D1F76003A0D5B /* export.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FC6A100C3D1F76003A0D5B /* export.png */; };
 		652B83F606185B1500BEB316 /* BBThemeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 652B83F406185B1500BEB316 /* BBThemeHandler.h */; };
@@ -90,6 +91,7 @@
 		375E51A10BA9A5C300079395 /* iLifeControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iLifeControls.framework; sourceTree = "<group>"; };
 		37668BB30C4295B100C581F0 /* font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = font.png; sourceTree = "<group>"; };
 		37668BB80C42966000C581F0 /* themes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = themes.png; sourceTree = "<group>"; };
+		37668BC50C4296D800C581F0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		37FC6A0F0C3D1F76003A0D5B /* hud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud.png; sourceTree = "<group>"; };
 		37FC6A100C3D1F76003A0D5B /* export.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = export.png; sourceTree = "<group>"; };
 		652B83F406185B1500BEB316 /* BBThemeHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BBThemeHandler.h; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
 				2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */,
 				8D15AC360486D014006FF6A4 /* Info.plist */,
+				376692F80C4296F800C581F0 /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				37FC6A120C3D1F76003A0D5B /* export.png in Resources */,
 				37668BB40C4295B100C581F0 /* font.png in Resources */,
 				37668BB90C42966000C581F0 /* themes.png in Resources */,
+				376692F90C4296F800C581F0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +346,14 @@
 				2A37F4BAFDCFA73011CA2CEA /* English */,
 			);
 			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		376692F80C4296F800C581F0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37668BC50C4296D800C581F0 /* English */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		CCAC834C063FF2A00083FC5D /* Button Builder Help */ = {
