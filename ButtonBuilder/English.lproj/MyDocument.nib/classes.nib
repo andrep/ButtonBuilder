@@ -34,6 +34,7 @@
                 setFont = id; 
                 showAboutWindow = id; 
                 showInspectorWindow = id; 
+                toggleThemesView = id; 
                 updateBGCanvas = id; 
                 updateCanvas = id; 
             }; 

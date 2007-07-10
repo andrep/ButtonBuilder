@@ -254,8 +254,13 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 - (IBAction) showInspectorWindow:(id)sender
 {
 	[inspectorWindow makeKeyAndOrderFront:nil];
-	[self updateCanvas:self]; //Crashes BB
 }
+
+- (IBAction) toggleThemesView:(id)sender;
+{
+	NSLog(@"Hello, I'm the action that is going to hide and show the theme view.");
+}
+
 
 //Launch: WindowController has loaded
 - (void)windowControllerDidLoadNib:(NSWindowController *) aController
@@ -435,7 +440,7 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
         [toolbarItem setPaletteLabel: @"Theme"];
         [toolbarItem setImage: [NSImage imageNamed: @"themes.png"]];
         [toolbarItem setTarget: self];
-        [toolbarItem setAction: @selector(toggleThemeWindow:)];
+        [toolbarItem setAction: @selector(toggleThemesView:)];
    	} else if ([itemIdent isEqual: Item2ToolbarItemIdentifier]) {
         [toolbarItem setLabel: @"Font"];
         [toolbarItem setPaletteLabel: @"Font"];

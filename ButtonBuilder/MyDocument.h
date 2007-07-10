@@ -72,6 +72,7 @@
 - (IBAction) exportImageAs:(id)sender;
 - (IBAction) exportPopUpAction:(id)sender;
 - (IBAction) showInspectorWindow:(id)sender;
+- (IBAction) toggleThemesView:(id)sender;
 
 - (float) buttonSize;
 - (float) buttonOpacity;
