@@ -259,6 +259,8 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 - (IBAction) toggleThemesView:(id)sender;
 {
 	NSLog(@"Hello, I'm the action that is going to hide and show the theme view.");
+	//[myTableView setFrame:newFrame];
+	//[myTableView setNeedsDisplay:YES];
 }
 
 
