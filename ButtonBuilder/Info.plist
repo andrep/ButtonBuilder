@@ -40,7 +40,7 @@
 	<key>CFBundleSignature</key>
 	<string>rmsf</string>
 	<key>CFBundleVersion</key>
-	<string>SUBVERSION_REVISION_NUMBER</string>
+	<string>Build 141</string>
 	<key>CFBundleShortVersionString</key>
 	<string>CURRENT_PROJECT_VERSION</string>
 	<key>NSHumanReadableCopyright</key>
