@@ -43,7 +43,7 @@
                 bgCanvas = id; 
                 bgcolorWell = id; 
                 captionTextView = id; 
-                documentWindow = NFIWindow; 
+                documentWindow = NSWindow; 
                 exportPopUp = id; 
                 fontPos = id; 
                 fontPosStepper = id; 

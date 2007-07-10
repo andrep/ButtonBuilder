@@ -27,7 +27,7 @@
 @interface MyDocument : NSDocument
 {
 	//Windows
-	IBOutlet NFIWindow *documentWindow;
+	IBOutlet id documentWindow;
 	IBOutlet id inspectorWindow;
 	IBOutlet id saveOptionView;
 	

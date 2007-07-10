@@ -58,21 +58,18 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 	//Shows the Transparency Slider
 	[[NSColorPanel sharedColorPanel] setShowsAlpha:YES];
 	
-	//Make sure we have a button selected in the list
-	[themeHandler setRowNumber:0]; 
-	
 	currentFont = [NSFont fontWithName:@"Lucida Grande Bold" size:24.0];
 	//[self updateCanvas:self]; //Crashes BB
 	[self updateBGCanvas:self];
 	
-	//PUT UPDATE CODE HERE FOR CANVAS
-	[documentWindow setContentSize:NSMakeSize(668,387)];
-	
+	//Make sure we have a button selected in the list
+	[themeHandler setRowNumber:0]; 
 	
 	//Set last update text field if not yet run
+	/* Commted out as it appears it wasn't working.
 	if ([[NSUserDefaults standardUserDefaults] objectForKey:@"SULastCheckTime"] == nil) {
 		[[NSUserDefaults standardUserDefaults] setObject:@"Not Yet Run" forKey:@"SULastCheckTime"];
-	}
+	}*/
 }
 
 //Get Button Caption
