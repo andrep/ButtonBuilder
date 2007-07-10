@@ -58,12 +58,14 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 	//Shows the Transparency Slider
 	[[NSColorPanel sharedColorPanel] setShowsAlpha:YES];
 	
+	
 	currentFont = [NSFont fontWithName:@"Lucida Grande Bold" size:24.0];
-	//[self updateCanvas:self];
+	//[self updateCanvas:self]; //Crashes BB
 	[self updateBGCanvas:self];
 	
 	//PUT UPDATE CODE HERE FOR CANVAS
 	[documentWindow setContentSize:NSMakeSize(668,387)];
+	
 	
 	//Center windows if first launch
 	if (![myFileManager fileExistsAtPath:[@"~/Library/Preferences/com.realmacsoftware.ButtonBuilder4.plist" stringByExpandingTildeInPath]]) {
@@ -75,9 +77,6 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 	if ([[NSUserDefaults standardUserDefaults] objectForKey:@"SULastCheckTime"] == nil) {
 		[[NSUserDefaults standardUserDefaults] setObject:@"Not Yet Run" forKey:@"SULastCheckTime"];
 	}
-	
-
-	
 }
 
 //Get Button Caption
@@ -147,7 +146,7 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 
 - (IBAction)updateCanvas:(id)sender
 {
-	[imageController drawImage];
+	[imageController drawImage];	
 	[imageCanvas setImage:[imageController finalImage]];
 	[[imageController finalImage] release];
 	[documentWindow setDocumentEdited:YES];
@@ -299,10 +298,9 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 		[self updateCanvas:self];
 		[self updateBGCanvas:self];
 	}
-
+		
 	[documentWindow setDocumentEdited:NO];
 	[self updateChangeCount:NSChangeCleared];
-
 }
 
 //////////////////////////////////////////////////////

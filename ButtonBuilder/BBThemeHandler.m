@@ -40,11 +40,15 @@
 	[themeArray setArray:[myfilemanager directoryContentsAtPath:[imagePath stringByExpandingTildeInPath]]];
     int i;
     for (i=[themeArray count]-1;i>=0;i--) { //Ignore hidden files.
+		
         if ([[[themeArray objectAtIndex:i] lowercaseString] isEqualToString:@".ds_store"] | [[[themeArray objectAtIndex:i] lowercaseString] isEqualToString:@".svn"]) {
-            [themeArray removeObjectAtIndex:i];}
+            [themeArray removeObjectAtIndex:i];
+			NSLog(@"Removed %i", i);
+			}
 		}
 
-		[myfilemanager release];
+	[myfilemanager release];
+		
 }
 
 

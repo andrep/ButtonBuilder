@@ -46,7 +46,7 @@
 	
 	//makes sure the width slider's minimum is set correctly
 	[documentController setSliderValue:[workingRepLeft size].width+[workingRepLeft size].width+1];
-
+	
 	compositeImage = [[NSImage alloc] initWithSize:NSMakeSize([documentController buttonWidth],[workingRepLeft size].height)];
 	[compositeImage lockFocus];
 	{
