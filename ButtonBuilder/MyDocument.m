@@ -58,6 +58,8 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 	//Shows the Transparency Slider
 	[[NSColorPanel sharedColorPanel] setShowsAlpha:YES];
 	
+	//Make sure we have a button selected in the list
+	[themeHandler setRowNumber:0]; 
 	
 	currentFont = [NSFont fontWithName:@"Lucida Grande Bold" size:24.0];
 	//[self updateCanvas:self]; //Crashes BB
@@ -66,12 +68,6 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 	//PUT UPDATE CODE HERE FOR CANVAS
 	[documentWindow setContentSize:NSMakeSize(668,387)];
 	
-	
-	//Center windows if first launch
-	if (![myFileManager fileExistsAtPath:[@"~/Library/Preferences/com.realmacsoftware.ButtonBuilder4.plist" stringByExpandingTildeInPath]]) {
-		[documentWindow center];
-		[inspectorWindow center];
-	}
 	
 	//Set last update text field if not yet run
 	if ([[NSUserDefaults standardUserDefaults] objectForKey:@"SULastCheckTime"] == nil) {
@@ -261,6 +257,7 @@ static NSString* Item4ToolbarItemIdentifier 	= @"Export Identifier";
 - (IBAction) showInspectorWindow:(id)sender
 {
 	[inspectorWindow makeKeyAndOrderFront:nil];
+	[self updateCanvas:self]; //Crashes BB
 }
 
 //Launch: WindowController has loaded
