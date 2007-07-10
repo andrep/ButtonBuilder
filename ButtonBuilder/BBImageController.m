@@ -139,7 +139,7 @@
 	}
 	[finalImage unlockFocus];
 	
-	NSString *myString = [NSString stringWithFormat:@"Size: %ix%i Pixels",(int)[finalImage size].width,(int)[finalImage size].height];
+	NSString *myString = [NSString stringWithFormat:@"%ix%i Pixels",(int)[finalImage size].width,(int)[finalImage size].height];
 	[sizeTextField setStringValue: myString];
 
 	return finalImage;
