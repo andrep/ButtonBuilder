@@ -153,6 +153,7 @@
 			children = (
 				7BFE8C4E0B70DAEF006FD7BA /* LICENSE.txt */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				37FF90800C43E6F500EAEDBF /* Interface Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
 				2A37F4C3FDCFA73011CA2CEA /* Dependencies */,
@@ -171,12 +172,10 @@
 				652B83F506185B1500BEB316 /* BBThemeHandler.m */,
 				65DE3252061866FA00593D93 /* BBImageController.h */,
 				65DE3253061866FA00593D93 /* BBImageController.m */,
-				CC3D064C06426A81008013F9 /* NSImageView_subclass.h */,
-				CC3D064D06426A81008013F9 /* NSImageView_subclass.m */,
 				A01B843C0BEF8FCD00814957 /* ImageView.h */,
 				A01B843D0BEF8FCD00814957 /* ImageView.m */,
-				A01BDC6F0BEFC4AC009D4BFD /* TableView.h */,
-				A01BDC700BEFC4AC009D4BFD /* TableView.m */,
+				CC3D064C06426A81008013F9 /* NSImageView_subclass.h */,
+				CC3D064D06426A81008013F9 /* NSImageView_subclass.m */,
 				A0D73A100BEFD29B00E87869 /* PreferencesController.h */,
 				A0D73A110BEFD29B00E87869 /* PreferencesController.m */,
 			);
@@ -220,6 +219,15 @@
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 			);
 			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		37FF90800C43E6F500EAEDBF /* Interface Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A01BDC6F0BEFC4AC009D4BFD /* TableView.h */,
+				A01BDC700BEFC4AC009D4BFD /* TableView.m */,
+			);
+			name = "Interface Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

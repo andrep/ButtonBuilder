@@ -56,6 +56,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
-	<string>http://nikf.org/buttonbuilder.xml</string>
+	<string>http://feeds.feedburner.com/buttonbuilder</string>
 </dict>
 </plist>
