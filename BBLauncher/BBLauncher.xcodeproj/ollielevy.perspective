@@ -224,6 +224,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -269,9 +271,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>7</integer>
-									<integer>0</integer>
+									<integer>15</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -303,8 +303,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -322,7 +320,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A03CF8490C0459E0005FBECB</string>
+										<string>A012C98B0C5D3E4E00A3EB86</string>
 										<key>history</key>
 										<array>
 											<string>A019F3720BD6ABE0007F3190</string>
@@ -330,7 +328,7 @@
 											<string>A0BDF9EA0BFF24B9009DF10F</string>
 											<string>A0BDFA0C0BFF2589009DF10F</string>
 											<string>A03CF8460C0459E0005FBECB</string>
-											<string>A03CF8470C0459E0005FBECB</string>
+											<string>A03CF8490C0459E0005FBECB</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -439,11 +437,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>A03CF8310C0458EB005FBECB</string>
+				<string>A012C9880C5D3E4E00A3EB86</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>A03CF8320C0458EB005FBECB</string>
+				<string>A012C9890C5D3E4E00A3EB86</string>
 				<string>A0AEE4BC0BA46F5D00A3CFE2</string>
-				<string>A03CF8330C0458EB005FBECB</string>
+				<string>A012C98A0C5D3E4E00A3EB86</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -859,7 +857,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/ollielevy/Desktop/Projects/Apps/Launcher Plugins/BBLauncher/BBLauncher.xcodeproj</string>
+		<string>/Users/ollielevy/Desktop/BBLauncher/BBLauncher.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>53 55 1627 973 0 0 1680 1028 </string>

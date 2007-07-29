@@ -280,7 +280,7 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SYSTEM_APPS_DIR)/RapidWeaver.app/Contents/Frameworks\"";
 				OTHER_CFLAGS = "";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = RWThemeMiner_Launcher;
+				PRODUCT_NAME = BBLauncher;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -324,7 +324,7 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_3 = "\"$(SYSTEM_APPS_DIR)/RapidWeaver.app/Contents/Frameworks\"";
 				OTHER_CFLAGS = "";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = RWThemeMiner_Launcher;
+				PRODUCT_NAME = BBLauncher;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
