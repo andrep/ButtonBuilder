@@ -74,10 +74,11 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 201611495;
-			PBXWorkspaceStateSaveDate = 201611495;
+			PBXPerProjectTemplateStateSaveDate = 207437316;
+			PBXWorkspaceStateSaveDate = 207437316;
 		};
 		perUserProjectItems = {
+			A012C98B0C5D3E4E00A3EB86 /* PBXTextBookmark */ = A012C98B0C5D3E4E00A3EB86 /* PBXTextBookmark */;
 			A019F3720BD6ABE0007F3190 /* PBXTextBookmark */ = A019F3720BD6ABE0007F3190 /* PBXTextBookmark */;
 			A019F3730BD6ABE0007F3190 /* PBXTextBookmark */ = A019F3730BD6ABE0007F3190 /* PBXTextBookmark */;
 			A019F3760BD6ABE0007F3190 /* PBXTextBookmark */ = A019F3760BD6ABE0007F3190 /* PBXTextBookmark */;
@@ -86,7 +87,6 @@
 			A019F3790BD6ABE0007F3190 /* PBXTextBookmark */ = A019F3790BD6ABE0007F3190 /* PBXTextBookmark */;
 			A035F7A10BDBD529004AD6ED /* PBXTextBookmark */ = A035F7A10BDBD529004AD6ED /* PBXTextBookmark */;
 			A03CF8460C0459E0005FBECB /* PBXTextBookmark */ = A03CF8460C0459E0005FBECB /* PBXTextBookmark */;
-			A03CF8470C0459E0005FBECB /* PBXTextBookmark */ = A03CF8470C0459E0005FBECB /* PBXTextBookmark */;
 			A03CF8480C0459E0005FBECB /* PBXTextBookmark */ = A03CF8480C0459E0005FBECB /* PBXTextBookmark */;
 			A03CF8490C0459E0005FBECB /* PBXTextBookmark */ = A03CF8490C0459E0005FBECB /* PBXTextBookmark */;
 			A0BDF9EA0BFF24B9009DF10F /* PBXTextBookmark */ = A0BDF9EA0BFF24B9009DF10F /* PBXTextBookmark */;
@@ -107,7 +107,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1373, 2688}}";
 			sepNavSelRange = "{1172, 0}";
-			sepNavVisRect = "{{0, 94}, {1373, 747}}";
+			sepNavVisRect = "{{0, 0}, {1373, 747}}";
 		};
 	};
 	9C736B69094C726A001443E6 /* BBLauncher */ = {
@@ -119,6 +119,16 @@
 			sepNavSelRange = "{783, 0}";
 			sepNavVisRect = "{{0, 0}, {1373, 747}}";
 		};
+	};
+	A012C98B0C5D3E4E00A3EB86 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 86EC470B0681049D00EF9A10 /* BBLauncherPlugin.m */;
+		name = "BBLauncherPlugin.m: 34";
+		rLen = 0;
+		rLoc = 1172;
+		rType = 0;
+		vrLen = 1672;
+		vrLoc = 0;
 	};
 	A019F3720BD6ABE0007F3190 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -199,16 +209,6 @@
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 0;
-	};
-	A03CF8470C0459E0005FBECB /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 86EC470B0681049D00EF9A10 /* BBLauncherPlugin.m */;
-		name = "BBLauncherPlugin.m: 93";
-		rLen = 0;
-		rLoc = 2485;
-		rType = 0;
-		vrLen = 1203;
-		vrLoc = 1868;
 	};
 	A03CF8480C0459E0005FBECB /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
